@@ -57,7 +57,4 @@ gem 'font-awesome-sass'
 gem 'bootstrap', '~>4.0.0'
 gem 'font-awesome-sass'
 gem 'popper_js', '~> 1.14.5'
-gem "foundation-rails"
-gem "autoprefixer-rails"
-gem "sprockets-es6"
 
