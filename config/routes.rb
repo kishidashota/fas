@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :questions, only: [:new, :show]
   devise_scope :user do
     resources :shops, only: [:new, :show,:create]
-    resources :addresses, only: [:new, :show]
+    resources :addresses, only: [:new, :show, :create]
   end
 end

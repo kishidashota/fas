@@ -1,0 +1,32 @@
+<div class = "container-login">
+<h1><%= t('shop_address') %></h1>
+  <%= form_for @address do |f| %>
+  <div class="form-group">
+    <%= f.label :郵便番号 %>
+    <span class="badge badge-info">必須</span>
+    <%= f.number_field :postcode,name: :zip11,  size: :"10", maxlength: :"8", onKeyUp: :"AjaxZip3.zip2addr(this,'','pref01','addr01');", placeholder: :"例)1234567" ,class: 'form-control'%> ←f.number_fieldとname部分が問題です。
+  </div>
+  <div class="form-group">
+    <%= f.label :都道府県 %>
+    <span class="badge badge-info">必須</span>
+    <%= f.text_field :prefecture_code,name: :"pref01", size: :"60", placeholder: :"例)鳥取県" ,class: 'form-control'%>
+  </div>
+  <div class="form-group">
+    <%= f.label :市区町村 %>
+    <span class="badge badge-info">必須</span>
+    <%= f.text_field :address_city, name: :"addr01",placeholder: :"例)鳥取市豪炎寺",class: 'form-control'%>
+  </div>
+  <div class="form-group">
+    <%= f.label :番地 %>
+    <span class="badge badge-info">必須</span>
+    <%= f.text_field :address_street, placeholder: :"例)1-2-3",class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :建物 %>
+    <%= f.text_field :address_building, placeholder: :"アパート・マンション名等",class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.submit "登録する", class: 'btn btn-primary btn-block' %>
+  </div>
+  <% end %>
+</div>
