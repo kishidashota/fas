@@ -1,3 +1,7 @@
+  <% if user_signed_in? && current_user.user_type=="shop" %>
+      <p>ショップ情報を入力しましたか?</p>
+      <%=link_to 'ショップ登録',new_address_path%>
+      <% else%>
 <%= render 'shared/headline' %>
 <div class="container">
   <div class= "row ">
@@ -138,6 +142,7 @@
       <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">第5位 <span class="badge badge-warning">React</span></a>
       </nav>
+            <% end %>
     </div> 
   </div> 
 </div>
